@@ -3,4 +3,5 @@
 Initially created in purpose of generating elevation based trail routes.
 
 ### App name
-vertW or elevationW?
+- [x] elevationW
+- [ ] vertW
