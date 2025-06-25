@@ -1,0 +1,9 @@
+# Vim backup files
+*~
+*.swp
+*.swo
+.*.un~
+
+# Enviroment files
+.env
+.env.local
