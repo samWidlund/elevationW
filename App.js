@@ -4,9 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>elevationW</Text>
+      <h1>elevationW</h1>
       <Text>Running app for generating elevation based trail routes</Text>
-
+      <Text>by Samuel Widlund</Text>
+      <Text>Version 0.1.0</Text>
+      <Text>© 2025</Text>
       <StatusBar style="auto" />
     </View>
   );
