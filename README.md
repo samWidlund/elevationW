@@ -27,4 +27,4 @@ Initially created in purpose of generating elevation based trail routes.
 - [ ] info about kalibrating watch
 - [ ] timer function
 - [ ] implement ai?
- 
+- [ ] update expo to 53.0.15
