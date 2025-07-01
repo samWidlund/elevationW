@@ -24,3 +24,7 @@ Initially created in purpose of generating elevation based trail routes.
 ### backlog
 
 - [ ] setup nativewind
+- [ ] info about kalibrating watch
+- [ ] timer function
+- [ ] implement ai?
+ 
