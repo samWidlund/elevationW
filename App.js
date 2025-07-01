@@ -8,14 +8,13 @@ export default function App() {
       <H1>
         elevationW
       </H1>
-      
+
       <Text>
         © Samuel Widlund 2025
       </Text>
     </View>
   );
 }
-
 
 // styling components
 const H1 = ({ children }) => (
