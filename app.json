@@ -22,7 +22,7 @@
     },
     "web": {
         "bundler": "metro",
-        "favicon": "img/elevationWLogo.png"
+        "favicon": "./img/elevationWLogo.png"
     }
   }
 }
