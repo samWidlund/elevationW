@@ -9,7 +9,7 @@ Initially created in purpose of generating elevation based trail routes.
 1. Install Dependecies <br>
    `npm install`
 
-#### Web
+#### Web development
 
 2. Install react native web runtime <br>
    `npx expo install react-dom react-native-web @expo/metro-runtime`
