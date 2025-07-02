@@ -5,13 +5,16 @@ import "./global.css"
 export default function App() {
   return (
     <View className="flex-1 items-center justify-center bg-green-100">
-      <H1>
-        elevationW
-      </H1>
-
-      <Text>
-        © Samuel Widlund 2025
-      </Text>
+      <StatusBar style="auto" />
+        <H1>
+          elevationW
+        </H1>
+        <Text>
+          testing
+        </Text>
+        <Text>
+          © Samuel Widlund 2025
+        </Text>
     </View>
   );
 }
