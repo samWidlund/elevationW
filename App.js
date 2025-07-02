@@ -1,17 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import "./global.css"
 
 export default function App() {
   return (
     <View className="flex-1 items-center justify-center bg-green-100">
-      <StatusBar style="auto" />
-        <H1>
-          elevationW
-        </H1>
-        <Text>
-          testing
-        </Text>
+      <StatusBar style="auto"/>
+
+        <Image 
+        source={require('./img/elevationWLogo.png')}
+        style={{width: 200, height: 200, marginBottom: 20, borderRadius: 20,}}
+        />
+
         <Text>
           © Samuel Widlund 2025
         </Text>
@@ -25,3 +25,4 @@ const H1 = ({ children }) => (
     {children}
   </Text>
 );
+
