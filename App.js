@@ -14,6 +14,9 @@ export default function App() {
         style={{width: 200, height: 200}}
       />
     </View>
+    <Description>
+      generate elevation based trail routes
+    </Description>
           
       <Text>
         © Samuel Widlund 2025
@@ -23,8 +26,8 @@ export default function App() {
 }
 
 // styling components
-const H1 = ({ children }) => (
-  <Text style={{ fontSize: 32, fontWeight: 'bold', marginBottom: 10 }}>
+const Description = ({ children }) => (
+  <Text style={{ fontSize: 16, fontStyle:"italic", marginBottom: 10 }}>
     {children}
   </Text>
 );
