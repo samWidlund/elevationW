@@ -19,6 +19,7 @@ export default function App() {
     <View className="flex-1 items-center justify-center bg-white">
       <StatusBar style="auto"/>
       
+        {/* slidein logo */}
         <Animated.View
           style={[shadowStyle, {
             transform: [{ translateX: slideAnim }],
@@ -33,15 +34,6 @@ export default function App() {
           resizeMode="contain"
         />
       </Animated.View>
-        
-      {/* logo */}
-      {/* <View className="shadow-lg bg-white rounded-3xl mb-5">
-        <Image 
-          className="rounded-3xl"
-          source={require('./img/elevationWLogo.png')}
-          style={{width: 200, height: 200}}
-        />
-      </View> */}
 
       {/* description */}
       <Description>
