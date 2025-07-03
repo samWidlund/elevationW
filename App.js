@@ -1,30 +1,57 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, Animated, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useRef } from 'react';
 import "./global.css"
 
 export default function App() {
+
+  // slide in animation
+  const slideAnim = useRef(new Animated.Value(-400)).current; // slide animation start outside screen
+  useEffect(() => {
+    Animated.timing(slideAnim, {
+      toValue: 0,
+      duration: 800,
+      useNativeDriver: true,
+    }).start();
+  }, [slideAnim]);
+
   return (
     <View className="flex-1 items-center justify-center bg-white">
       <StatusBar style="auto"/>
       
-    {/* logo */}
-    <View className="shadow-lg bg-white rounded-3xl mb-5">
-      <Image 
-        className="rounded-3xl"
-        source={require('./img/elevationWLogo.png')}
-        style={{width: 200, height: 200}}
-      />
-    </View>
+        <Animated.View
+          style={[shadowStyle, {
+            transform: [{ translateX: slideAnim }],
+            backgroundColor: 'white',
+            borderRadius: 24,
+            marginBottom: 20,
+          }]}
+        >
+        <Image
+          source={require('./img/elevationWLogo.png')}
+          className="w-52 h-52 rounded-3xl shadow-lg"
+          resizeMode="contain"
+        />
+      </Animated.View>
+        
+      {/* logo */}
+      {/* <View className="shadow-lg bg-white rounded-3xl mb-5">
+        <Image 
+          className="rounded-3xl"
+          source={require('./img/elevationWLogo.png')}
+          style={{width: 200, height: 200}}
+        />
+      </View> */}
 
-    {/* description */}
-    <Description>
-      generate elevation based trail routes
-    </Description>
+      {/* description */}
+      <Description>
+        generate elevation based trail routes
+      </Description>
 
-    {/* links */}    
-    <Text>
-      © Samuel Widlund 2025
-    </Text>
+      {/* links */}    
+      <Text>
+        © Samuel Widlund 2025
+      </Text>
     </View>
   );
 }
@@ -36,3 +63,10 @@ const Description = ({ children }) => (
   </Text>
 );
 
+const shadowStyle = {
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.3,
+  shadowRadius: 4.65,
+  elevation: 8,
+};
