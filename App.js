@@ -7,6 +7,7 @@ export default function App() {
     <View className="flex-1 items-center justify-center bg-white">
       <StatusBar style="auto"/>
       
+    {/* logo */}
     <View className="shadow-lg bg-white rounded-3xl mb-5">
       <Image 
         className="rounded-3xl"
@@ -14,13 +15,16 @@ export default function App() {
         style={{width: 200, height: 200}}
       />
     </View>
+
+    {/* description */}
     <Description>
       generate elevation based trail routes
     </Description>
-          
-      <Text>
-        © Samuel Widlund 2025
-      </Text>
+
+    {/* links */}    
+    <Text>
+      © Samuel Widlund 2025
+    </Text>
     </View>
   );
 }
