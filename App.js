@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Animated, StyleSheet, Text, View } from 'react-native';
+import { Image, Animated, StyleSheet, Text, View, Dimensions } from 'react-native';
 import { useEffect, useRef } from 'react';
 import "./global.css"
 
 export default function App() {
+  // variables
+  const screenWidth = Dimensions.get('window').width;
+  const slideAnim = useRef(new Animated.Value(-400)).current; // slide animation start outside screen
 
   // slide in animation
-  const slideAnim = useRef(new Animated.Value(-400)).current; // slide animation start outside screen
   useEffect(() => {
     Animated.timing(slideAnim, {
       toValue: 0,
@@ -30,7 +32,13 @@ export default function App() {
         >
         <Image
           source={require('./img/elevationWLogo.png')}
-          className="w-52 h-52 rounded-3xl shadow-lg"
+          style={{
+
+            // dynamic sizing
+            width: screenWidth * 0.5,
+            height: screenWidth * 0.5,
+          }}
+          className="rounded-3xl shadow-lg"
           resizeMode="contain"
         />
       </Animated.View>
