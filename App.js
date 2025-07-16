@@ -14,7 +14,7 @@ export default function App() {
       toValue: 0,
       duration: 800,
       useNativeDriver: true,
-    }).start();
+    }).start(); 
   }, [slideAnim]);
 
   return (
