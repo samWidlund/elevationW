@@ -17,6 +17,8 @@ export default function App() {
     }).start(); 
   }, [slideAnim]);
 
+  // ADD FADE OUT ANIMATION HERE
+
   return (
     <View className="flex-1 items-center justify-center bg-white">
       <StatusBar style="auto"/>
