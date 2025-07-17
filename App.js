@@ -8,7 +8,7 @@ export default function App() {
   const screenWidth = Dimensions.get('window').width;
   const slideAnim = useRef(new Animated.Value(-400)).current; // slide animation start outside screen
 
-  // slide in animation
+  // slide in
   useEffect(() => {
     Animated.timing(slideAnim, {
       toValue: 0,
