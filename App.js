@@ -49,6 +49,7 @@ export default function App() {
             // dynamic sizing
             width: screenWidth * 0.5,
             height: screenWidth * 0.5,
+            // fix fullscreen web size bug
           }}
           className="rounded-3xl shadow-lg"
           resizeMode="contain"
