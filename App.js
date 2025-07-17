@@ -53,21 +53,20 @@ export default function App() {
           className="rounded-3xl shadow-lg"
           resizeMode="contain"
         />
-      </Animated.View>
+       </Animated.View>
 
-      <Animated.Text
-      style={{
-        opacity: fadeAnim,
-        // fix styling
-      }}>
+        <Animated.View className="justify-center"
+          style={{
+            opacity: fadeAnim,
+          }}>
 
-        <Description>
-          generate elevation based trail routes
-        </Description>
-        <Text>
-          © Samuel Widlund 2025
+          <Description>
+            generate elevation based trail routes
+          </Description>
+          <Text>
+            © Samuel Widlund 2025
         </Text>
-      </Animated.Text>
+       </Animated.View>
     </View>
   );
 }
