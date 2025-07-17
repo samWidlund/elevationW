@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, Animated, StyleSheet, Text, View, Dimensions } from 'react-native';
+import { Image, Animated, StyleSheet, Text, View, Dimensions, fadeAnim} from 'react-native';
 import { useEffect, useRef } from 'react';
 import "./global.css"
 
@@ -7,6 +7,7 @@ export default function App() {
   // variables
   const screenWidth = Dimensions.get('window').width;
   const slideAnim = useRef(new Animated.Value(-400)).current; // slide animation start outside screen
+  const fadeAnim = useRef(new Animated.Value(1)).current;     // opacity starts at 1
 
   // slide in
   useEffect(() => {
@@ -14,10 +15,17 @@ export default function App() {
       toValue: 0,
       duration: 800,
       useNativeDriver: true,
-    }).start(); 
-  }, [slideAnim]);
-
-  // ADD FADE OUT ANIMATION HERE
+    }).start(() => {
+      // fade out
+      setTimeout(() => {
+        Animated.timing(fadeAnim, {
+          toValue: 0,
+          duration: 1000,
+          useNativeDriver: true,
+        }).start();
+      }, 3000);
+    });
+  }, [slideAnim, fadeAnim]);
 
   return (
     <View className="flex-1 items-center justify-center bg-white">
@@ -25,7 +33,10 @@ export default function App() {
       
         {/* slidein logo */}
         <Animated.View
-          style={[shadowStyle, {
+          style={[
+            shadowStyle,
+          {
+            opacity: fadeAnim,
             transform: [{ translateX: slideAnim }],
             backgroundColor: 'white',
             borderRadius: 24,
