@@ -46,7 +46,6 @@ export default function App() {
         <Image
           source={require('./img/elevationWLogo.png')}
           style={{
-
             // dynamic sizing
             width: screenWidth * 0.5,
             height: screenWidth * 0.5,
@@ -56,15 +55,19 @@ export default function App() {
         />
       </Animated.View>
 
-      {/* description */}
-      <Description>
-        generate elevation based trail routes
-      </Description>
+      <Animated.Text
+      style={{
+        opacity: fadeAnim,
+        // fix styling
+      }}>
 
-      {/* links */}    
-      <Text>
-        © Samuel Widlund 2025
-      </Text>
+        <Description>
+          generate elevation based trail routes
+        </Description>
+        <Text>
+          © Samuel Widlund 2025
+        </Text>
+      </Animated.Text>
     </View>
   );
 }
